@@ -1,7 +1,6 @@
 Explanation of the Approach
-The problem involves modifying the heights of towers (elements of the array) by adding or subtracting a given value 
-𝑘
-k, such that the difference between the tallest and shortest towers is minimized. Here's a step-by-step breakdown of the approach used in the solution:
+The problem involves modifying the heights of towers (elements of the array) by adding or subtracting a given value k, such that the difference between the tallest and shortest towers is minimized. 
+Here's a step-by-step breakdown of the approach used in the solution:
 
 Sort the Array:
 
