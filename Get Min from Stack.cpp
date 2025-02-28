@@ -1,19 +1,27 @@
 ### **Intuition & Approach:**  
 
-1. **Find Previous & Next Smaller Elements:**  
-   - Use a stack to find the nearest smaller element on the left (`preSmall`) and right (`nextSmall`) for each index.  
-   - This helps determine the maximum window size where an element is the minimum.  
+This code implements a **Min Stack**, which supports `push()`, `pop()`, `peek()`, and `getMin()` operations in **O(1) time** while keeping track of the minimum element.  
 
-2. **Store Elements with Their Window Size:**  
-   - Each element contributes as the **minimum** in a window of size `nextSmall[i] - preSmall[i] - 1`.  
+### **Approach:**  
+1️⃣ **Use a Stack of Pairs (`st`)**  
+   - Each entry stores `{value, current minimum}`.  
 
-3. **Sort by Element Value (Descending):**  
-   - Sorting ensures we process larger values first, maintaining correctness.  
+2️⃣ **Push Operation (`push(x)`)**  
+   - Update `ele` to track the **minimum so far**.  
+   - Push `{x, ele}` into the stack.  
 
-4. **Fill the Answer Array:**  
-   - Assign the highest possible value for each window size to get the **maximum of minimums** for all window sizes.  
+3️⃣ **Pop Operation (`pop()`)**  
+   - Remove the top element.  
+   - Update `ele` to the new **minimum** if the stack is not empty.  
 
-**Result:** We obtain an array where each index `i` contains the **max of min values for window size (i+1)**. 🚀
+4️⃣ **Peek Operation (`peek()`)**  
+   - Return the **top element** of the stack.  
+
+5️⃣ **Get Min (`getMin()`)**  
+   - Return the **minimum element** in constant time.  
+
+### **Key Takeaway:**  
+By storing the minimum alongside each value, we efficiently retrieve the smallest element at any time without extra traversal! 🚀
 
 stack<pair<int,int>>st;
     int ele=INT_MAX;
