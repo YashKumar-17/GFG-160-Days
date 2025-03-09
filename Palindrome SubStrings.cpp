@@ -1,11 +1,11 @@
 ### **Intuition and Approach**  
 
-The given code counts the number of **palindromic subsequences** in a string using an **expand-around-center approach**.  
+The given code counts the number of **palindromic substrings** in a string using an **expand-around-center approach**.  
 
 #### **Steps**  
 
 1. **Helper Function (`length`)**  
-   - Expands around the center (left `l` and right `r`) to check for palindromic sequences.  
+   - Expands around the center (left `l` and right `r`) to check for palindromic substrings.  
    - If characters match, it increases the count and expands further.  
 
 2. **Odd-Length Palindromes**  
@@ -17,7 +17,7 @@ The given code counts the number of **palindromic subsequences** in a string usi
    - Calls `length(i-1, i, s)`.  
 
 4. **Final Count**  
-   - Adds both counts and returns the total number of palindromic subsequences.  
+   - Adds both counts and returns the total number of palindromic substrings.  
 
 ### **Time Complexity:**  
 - **O(n²)** due to the expansion approach.
